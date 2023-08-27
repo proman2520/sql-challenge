@@ -1,45 +1,45 @@
-DROP TABLE if exists departments
+DROP TABLE if exists departments;
 CREATE TABLE departments (
 	dept_no VARCHAR,
 	dept_name VARCHAR
 );
 
-DROP TABLE if exists dept_emp
+DROP TABLE if exists dept_emp;
 CREATE TABLE dept_emp (
 	emp_no INT,
 	dept_no VARCHAR
 );
 
-DROP TABLE if exists dept_manager
+DROP TABLE if exists dept_manager;
 CREATE TABLE dept_manager (
 	dept_no VARCHAR,
 	emp_no INT
 );
 
-DROP TABLE if exists employees
+DROP TABLE if exists employees;
 CREATE TABLE employees (
 	emp_no INT,
 	emp_title_id VARCHAR,
-	birth_date VARCHAR,
+	birth_date DATE,
 	first_name VARCHAR,
 	last_name VARCHAR,
 	sex VARCHAR,
-	hire_date VARCHAR
+	hire_date DATE
 );
 
-DROP TABLE if exists salaries
+DROP TABLE if exists salaries;
 CREATE TABLE salaries (
 	emp_no INT,
 	salary INT
 );
 
-DROP TABLE if exists titles
+DROP TABLE if exists titles;
 CREATE TABLE titles (
 	title_id VARCHAR,
 	title VARCHAR
 );
 
-SELECT * from salaries
+SELECT * from departments
 
 
 

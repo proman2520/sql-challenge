@@ -15,7 +15,7 @@ CREATE TABLE titles (
 --Create employees table
 DROP TABLE if exists employees;
 CREATE TABLE employees (
-	emp_no INT NOT NULL PRIMARY KEY,
+	emp_no ID PRIMARY KEY,
 	emp_title_id VARCHAR(5),
 	birth_date DATE,
 	first_name VARCHAR(30),
@@ -28,7 +28,7 @@ CREATE TABLE employees (
 --Create dept_emp table
 DROP TABLE if exists dept_emp;
 CREATE TABLE dept_emp (
-	emp_no INT NOT NULL,
+	emp_no ID NOT NULL,
 	dept_no VARCHAR(4) NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
 	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
@@ -38,7 +38,7 @@ CREATE TABLE dept_emp (
 DROP TABLE if exists dept_manager;
 CREATE TABLE dept_manager (
 	dept_no VARCHAR(4) NOT NULL,
-	emp_no INT NOT NULL,
+	emp_no ID NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
 	FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
@@ -46,7 +46,7 @@ CREATE TABLE dept_manager (
 --Create salaries table
 DROP TABLE if exists salaries;
 CREATE TABLE salaries (
-	emp_no INT NOT NULL,
+	emp_no ID NOT NULL,
 	salary INT NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
